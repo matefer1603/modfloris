@@ -30,3 +30,4 @@ public class Usuarios {
         return "Usuario: " + nombre + " - Cédula: " + cedula + " - Correo: " + correo + " - Dinero: $" + dinero;
     }
 }
+
