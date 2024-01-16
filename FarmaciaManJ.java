@@ -1,6 +1,6 @@
-import javax.swing.*;
+port javax.swing.*;
 
-public class BIbliotecaJavaManager {
+public class FloristeriaJavaManager {
     public static void main(String[] args) {
         //Definicion de rol
         int opcion=0;
@@ -28,17 +28,12 @@ public class BIbliotecaJavaManager {
 
         }
         //Objetos (Libros)
-        Productos l1=new Productos("Cien años de soledad", "9780307352412", "Gabriel García Márquez", "Si", 29.99, 10);
-        Productos l2=new Productos("To Kill a Mockingbird", "0061120081", "Harper Lee","No" , 19.99, 0);
-        Productos l3=new Productos("1984", "9780451524935", "George Orwell", "Si", 14.99, 8);
-        Productos l4=new Productos("The Great Gatsby", "9780743273565", "F. Scott Fitzgerald", "Si", 24.99, 12);
-        Productos l5=new Productos("Harry Potter and the Sorcerer's Stone", "9780590353427", "J.K. Rowling", "No", 17.99, 0);
+        Productos l1=new Productos("Rosas", "5452", "Rojo", "Si", 0.30, 100);
+        Productos l2=new Productos("Tulipan", "5034", "Blanca","No" , 0.40, 10);
+        Productos l3=new Productos("Bugambilia", "2307", "Morada", "Si", 0.90, 18);
         //Objetos (Usuarios)
-        Usuarios u1=new Usuarios("Juan Pérez", "1234567890", "juan.perez@udla.edu.ec",50);
-        Usuarios u2=new Usuarios("María González", "0987654321", "maria.gonzalez@yahoo.com",25.3f);
-        Usuarios u3=new Usuarios("Carlos Rodríguez", "5678901234", "carlos.rodriguez@gmail.com",51.1f);
-        Usuarios u4=new Usuarios("Ana López", "3210987654", "ana.lopez@outlook.com",70);
-        Usuarios u5=new Usuarios("Pedro Sánchez", "9876543210", "pedro.sanchez@gmail.com",5);
+        Usuarios u1=new Usuarios("Camilo Brazales", "1234567890", "camilo.brazalez@udla.edu.ec",50);
+        Usuarios u2=new Usuarios("Mateo Romero", "0987654321", "mateo.romero@yahoo.com",25.3f);
 
         //Menu roles
         c=0;
@@ -48,7 +43,7 @@ public class BIbliotecaJavaManager {
                 {
                     while (true){
                         c=0;
-                        String operacionadmin= JOptionPane.showInputDialog(null,"Que desea realizar?\n 1)Observar el catalogo \n 2)Añadir libros \n  3)Añadir usuario \n 4)Lista de usuarios\n 5)Salir");
+                        String operacionadmin= JOptionPane.showInputDialog(null,"Que desea realizar?\n 1)Observar el catalogo \n 2)Añadir productos \n  3)Añadir usuario \n 4)Lista de usuarios\n 5)Salir");
                         try {
                             opcionadmin=Integer.parseInt(operacionadmin);
                             if (Funcionalidades.comprobacion(opcionadmin,5,1)){//Se rompe el bucle si la funcion comprobacion devuelve un true
@@ -66,12 +61,11 @@ public class BIbliotecaJavaManager {
 
                     switch (opcionadmin){//Switch para llamar a los metodos en base a la respuesta del admin
                         case 1://Observar el catalogo
-
-                            JOptionPane.showMessageDialog(null,"",Productos);
+                            JOptionPane.showMessageDialog(null,"ver productos");
                             break;
                         case 2://Añadir libros
                             Productos.nuevosproductos();
-                            JOptionPane.showMessageDialog(null,"Se añadio un nuevo libro");
+                            JOptionPane.showMessageDialog(null,"Se añadio un nuevo producto");
                             break;
                         case 3://Añadir usuarios manualmente
                             Usuarios.nuevosUsuarios();
